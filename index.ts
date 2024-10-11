@@ -153,3 +153,44 @@ const myOBJ: myinfoobj[] = [
     },
   },
 ];
+
+//! utility type
+
+//  parital
+
+type User111 = Partial<{
+  name: string;
+  age: number;
+  car: boolean;
+}>;
+
+const user111: User111 = {
+  name: 'mindia',
+  age: 12,
+  car: true,
+};
+
+//! readonly
+
+type User113 = Readonly<{
+  name: string;
+  age: number;
+  car: boolean;
+}>;
+
+const user113: User113 = {
+  name: 'ss',
+  age: 12,
+  car: false,
+};
+
+//! pick
+
+type User44444 = pick<User113, 'name', 'age'>;
+
+const user115: User44444 = {
+  name: 'ss',
+  age: 12,
+};
+
+//! Omit
